@@ -1,0 +1,2 @@
+C:\Users\Trevor Tang\source\repos\BinaryPointerTreeDemo\BinarySearchTreeDemo\x64\Debug\BinarySearchTreeDemo.exe
+C:\Users\Trevor Tang\source\repos\BinaryPointerTreeDemo\BinarySearchTreeDemo\x64\Debug\BinarySearchTreeDemo.pdb

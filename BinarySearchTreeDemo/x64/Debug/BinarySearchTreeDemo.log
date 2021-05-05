@@ -1,0 +1,3 @@
+﻿  BinarySearchTreeDemo.cpp
+C:\Users\Trevor Tang\source\repos\BinaryPointerTreeDemo\BinarySearchTreeDemo\BinarySearchTreeDemo.cpp(168,16): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+  BinarySearchTreeDemo.vcxproj -> C:\Users\Trevor Tang\source\repos\BinaryPointerTreeDemo\BinarySearchTreeDemo\x64\Debug\BinarySearchTreeDemo.exe
