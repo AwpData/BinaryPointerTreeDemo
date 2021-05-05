@@ -25,7 +25,7 @@ public:
 		root = nullptr;
 	}
 
-	// These are all public methods that will use the first TreeNode "Root" (for encapsulation and efficiency) 
+	// These are all public methods that will use the first TreeNode "Root" (for encapsulation and efficiency) so the user can't enter it in 
 	void insert(int value) {
 		insert(value, root);
 	}
@@ -62,7 +62,7 @@ private: // All private methods for encapsulation and so the user does not have 
 
 	void insert(int value, TreeNode*& leaf) { // Inserts value into the tree (indirection operator used because we might modify address of treenode) 
 		if (leaf == nullptr) { // This is either for the first node "root" or if we find a null TreeNode (as in pointing to nullptr) 
-			cout << "Inserted " << value << endl;
+			cout << "Inserted " << value << " into tree" << endl;
 			leaf = new TreeNode(value); // Creates a treeNode here 
 			return;
 		}
@@ -172,10 +172,9 @@ int main()
 
 	// Putting 30 random numbers (0-100) into the array and also inserting that exact array index into the tree 
 	int i = 0;
-
 	while (i < 30) { // This guarantees that we will have 30 elements in the array 
 		int num = rand() % 101;
-		if (!tree.search(num, false)) { // To avoid duplicates!
+		if (!tree.search(num, false)) { // To avoid duplicates! (Tree doesn't find the value through search function) 
 			nums[i] = num;
 			tree.insert(nums[i]);
 			i++; // I only increment if a number was inserted!
@@ -184,12 +183,15 @@ int main()
 
 	// I print the tree in every traversal method just so you can see it in different forms 
 	cout << "\nTree as it stands (in 3 different traversals):" << endl;
+
 	cout << "\nPreorder: ";
 	tree.displayPreorder();
 	cout << endl;
+
 	cout << "Inorder: ";
 	tree.displayInorder();
 	cout << endl;
+
 	cout << "Postorder: ";
 	tree.displayPostorder();
 	cout << "\n" << endl;
@@ -213,6 +215,7 @@ int main()
 					nums[k] = nums[k + 1];
 				}
 				maxIndex--;
+
 				cout << "Array after: "; // Just re-printing the array so you can see it worked 
 				for (int l = 0; l < maxIndex; l++) {
 					cout << nums[l] << " ";
