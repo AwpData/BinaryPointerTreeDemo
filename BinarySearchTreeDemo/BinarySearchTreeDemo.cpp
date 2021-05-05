@@ -120,7 +120,9 @@ private: // All private methods for encapsulation and so the user does not have 
 				search(leaf->right, value, printAddress);
 			}
 		}
-		return false;
+		else { // Else statement needed for false because although recursion returns, it would have returned false instead (since I have no return statement after recursive function) 
+			return false;
+		}
 	}
 
 	void remove(TreeNode*& tree, int value) { // To remove a value, we must pass in the indirection operator since we will be modifying addresses of our treenodes
@@ -194,6 +196,7 @@ int main()
 
 	// I search each array index for every tree value's address 
 	for (int i = 0; i < 30; i++) {
+		cout << "[" << i + 1 << "] "; // Just prints out the array index + 1 for ease of reading 
 		tree.search(nums[i]);
 	}
 	cout << "\n";
@@ -225,11 +228,12 @@ int main()
 	}
 	// Once I remove everything, I search every index in the array again so you can compare addresses (they ARE the same!) 
 	cout << "Confirming addresses are the same (They definitely are the same): " << endl;
-	for (int i = 0; i < maxIndex; i++) { // Searching again to make sure everything is the same 
+	for (int i = 0; i < 25; i++) { // Searching again to make sure everything is the same 
+		cout << "[" << i + 1 << "] ";
 		tree.search(nums[i]);
 	}
 
-	for (int i = 0; i < 25; i++) { // Frees up memory by deleting all the nodes once the program finishes 
+	for (int i = 0; i < 25; i++) { // Frees up memory by deleting all the tree nodes once the program finishes 
 		tree.remove(nums[i]);
 	}
 }

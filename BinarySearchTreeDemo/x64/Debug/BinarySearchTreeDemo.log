@@ -1,3 +1,4 @@
 ﻿  BinarySearchTreeDemo.cpp
-C:\Users\Trevor Tang\source\repos\BinaryPointerTreeDemo\BinarySearchTreeDemo\BinarySearchTreeDemo.cpp(168,16): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Trevor Tang\source\repos\BinaryPointerTreeDemo\BinarySearchTreeDemo\BinarySearchTreeDemo.cpp(170,16): warning C4244: 'initializing': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Trevor Tang\source\repos\BinaryPointerTreeDemo\BinarySearchTreeDemo\BinarySearchTreeDemo.cpp(126): warning C4715: 'Tree::search': not all control paths return a value
   BinarySearchTreeDemo.vcxproj -> C:\Users\Trevor Tang\source\repos\BinaryPointerTreeDemo\BinarySearchTreeDemo\x64\Debug\BinarySearchTreeDemo.exe
